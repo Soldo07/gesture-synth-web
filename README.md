@@ -125,8 +125,11 @@ Note singole.
 
 ## Training: impara seguendo i gesti
 
-Nel **Training** le mani trasparenti mostrano la combinazione da eseguire,
-le dita da alzare e la preparazione del gesto successivo. Le due guide
+Nel **Training** lo schermo di esecuzione è diviso in due corsie affiancate.
+In ciascuna scende **una sola mano guida alla volta**, dall'alto verso una
+linea comune: imita il gesto quando la raggiunge. Con **«Aspetta il mio gesto»**
+la guida resta sulla linea finché esegui l'attacco richiesto; durante Pausa
+le figure rimangono ferme. Le due guide
 hanno ruoli precisi in Melodia sola:
 
 - **Sinistra: posizione sulla tastiera.** Ti indica il pugno di preparazione
