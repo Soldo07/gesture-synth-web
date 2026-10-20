@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#4A121C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%234A121C'/%3E%3Ctext x='24' y='35' font-size='30' text-anchor='middle' fill='%23D4B477' font-family='Georgia'%3E%E2%99%AE%3C/text%3E%3C/svg%3E">
+<title>Gesture Synth · Studio</title>
+  <script type="module" crossorigin src="./assets/index-CK06HOuW.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ngx0XrTE.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-name">Gesture Synth</span><span class="brand-tag">Studio</span></div>
+  <nav class="mode-switch" aria-label="Modalità">
+    <button id="freeMode" class="selected" aria-pressed="true">Suona</button>
+    <button id="trainingMode" aria-pressed="false">Training</button>
+  </nav>
+  <div class="header-status">
+    <span id="cameraStatus" class="stato" role="status">Fotocamera spenta</span>
+    <span id="sampleStatus" class="stato" role="status">Campioni da caricare</span>
+    <button id="activate" class="primary" aria-pressed="false" aria-busy="false" title="Le immagini vengono elaborate solo su questo dispositivo">Attiva audio e fotocamera</button>
+  </div>
+</header>
+
+<div class="studio">
+  <main class="performance" aria-label="Area di esecuzione">
+    <div id="trainingTransport" class="transport" role="group" aria-label="Trasporto del Training">
+      <button id="play" class="primary" disabled>Avvia</button>
+      <button id="reset" disabled>Ricomincia</button>
+        <button id="melodyTraining" class="secondary" aria-pressed="false">Melodia + guida sinistra</button>
+      <div class="avanzamento">
+        <progress id="progress" max="1" value="0" aria-label="Avanzamento del brano"></progress>
+        <p id="trainingFeedback" class="training-feedback" role="status" aria-live="polite">Carica un brano o apri l’esempio.</p>
+      </div>
+    </div>
+
+    <section id="leftGuidePanel" class="left-guide-panel" hidden aria-label="Sequenza dei gesti della mano sinistra">
+      <strong id="leftGuideTitle"></strong>
+      <p id="leftGuideSequence" role="status" aria-live="polite"></p>
+    </section>
+    <section class="scene" id="scene" aria-label="Palcoscenico">
+      <video id="webcam" autoplay playsinline muted></video>
+      <div class="velo" aria-hidden="true"></div>
+      <canvas id="visual" aria-label="Mani riconosciute e mani guida trasparenti del Training"></canvas>
+      <span class="angolo a1" aria-hidden="true"></span><span class="angolo a2" aria-hidden="true"></span><span class="angolo a3" aria-hidden="true"></span><span class="angolo a4" aria-hidden="true"></span>
+
+      <div class="lane-headings">
+        <div class="targa sinistra">
+          <span class="targa-titolo">Mano sinistra</span>
+          <b id="leftNote">—</b>
+          <span id="leftState" class="targa-stato">mano non vista</span>
+          <span id="leftTarget" class="targa-prossimo"></span>
+        </div>
+        <div class="targa destra">
+          <span class="targa-titolo">Mano destra</span>
+          <b id="rightNote">—</b>
+          <span id="rightState" class="targa-stato">mano non vista</span>
+          <span id="rightTarget" class="targa-prossimo"></span>
+        </div>
+      </div>
+
+
+
+
+      <div class="play-line" aria-hidden="true"><span>Suona qui</span></div>
+    </section>
+
+      <div id="sceneHint" class="scene-hint">Attiva audio e fotocamera.<br><small>Oppure tocca i tasti qui sotto.</small></div>
+      <aside id="cartiglio" class="cartiglio" aria-label="Come si suona">
+        <span class="cartiglio-titolo">Come si suona</span>
+        <ol>
+          <li><i>i.</i>1–5 dita → gradi I–V</li>
+          <li><i>ii.</i>Indice + mignolo → VI; + pollice → VII</li>
+          <li><i>iii.</i>Pugno → silenzio</li>
+        </ol>
+        <button id="chiudiCartiglio" type="button" aria-label="Chiudi la guida rapida">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2 L12 12 M12 2 L2 12" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </button>
+      </aside>
+
+    <div class="keyboard-area">
+      <div class="keyboards">
+        <div class="tastiera-mano">
+          <div class="keyboard-heading sinistra"><span>Sinistra <i>· accompagnamento</i></span><span id="leftRange" class="registro-mostrato"></span></div>
+          <div id="leftKeyboard" class="keyboard" aria-label="Tasti mano sinistra"></div>
+        </div>
+        <div class="tastiera-mano">
+          <div class="keyboard-heading destra"><span>Destra <i>· melodia</i></span><span id="rightRange" class="registro-mostrato"></span></div>
+          <div id="rightKeyboard" class="keyboard" aria-label="Tasti mano destra"></div>
+        </div>
+      </div>
+      <section id="scorePads" class="score-pads" hidden aria-label="Note da eseguire, anche fuori registro">
+        <p>Note del prossimo gesto · tienile premute per un accordo che il gesto non copre</p>
+        <div class="score-pad-columns"><div id="leftScorePads"></div><div id="rightScorePads"></div></div>
+      </section>
+    </div>
+    <p id="message" class="message" role="status" aria-live="polite">Pronto. I suoni vengono caricati soltanto quando scegli uno strumento.</p>
+  </main>
+
+  <aside class="leggio" aria-label="Leggio">
+    <section id="freePanel" class="leggio-sezione">
+      <h1 class="visivamente-nascosto">Suona con le mani</h1>
+    </section>
+
+    <section id="trainingPanel" class="leggio-sezione" hidden>
+      <div class="scheda-brano">
+        <span class="etichetta">Brano</span>
+        <p id="scoreInfo" class="score-info">Nessuno spartito caricato. Formato MusicXML (.musicxml o .xml).</p>
+        <label class="etichetta" for="librarySelect">Notturni di Chopin</label>
+        <select id="librarySelect" class="library-select" disabled><option>Caricamento biblioteca…</option></select>
+        <button id="libraryLoad" class="secondary" disabled>Carica il brano</button>
+        <p id="libraryStatus" class="library-status" role="status" aria-live="polite"></p>
+        <p id="scoreSource" class="library-source" hidden><a id="scoreSourceLink" target="_blank" rel="noopener noreferrer">Fonte dello spartito</a> · <span id="scoreLicense"></span> · <a href="./brani/SOURCES.txt" target="_blank" rel="noopener noreferrer">Attribuzioni e adattamenti</a></p>
+        <details id="scoreWarnings" class="score-warnings" hidden><summary id="scoreWarningsLabel">Adattamenti per lo studio</summary><ul id="scoreWarningsList"></ul></details>
+        <div class="azioni-brano">
+          <label class="file-button">Carica spartito<input id="scoreFile" type="file" accept=".musicxml,.xml,.mxl,application/xml,text/xml"></label>
+          <button id="demo" class="text-button">Apri l’esempio</button>
+        </div>
+      </div>
+      <div class="ornamento" aria-hidden="true"><span></span><i></i><span></span></div>
+      <fieldset class="gruppo">
+        <legend class="etichetta">Parte da studiare</legend>
+        <select id="practice" hidden><option value="right">Destra · sinistra automatica</option><option value="left">Sinistra · destra automatica</option><option value="both">Entrambe le mani</option><option value="listen">Ascolta il brano</option></select>
+        <div class="lista-scelte" data-proxy="practice"></div>
+      </fieldset>
+      <div class="gruppo">
+        <span class="etichetta" id="etichettaVelocita">Velocità</span>
+        <select id="speed" hidden><option value="0.5">50%</option><option value="0.75" selected>75%</option><option value="1">100%</option></select>
+        <div class="segmenti" data-proxy="speed" role="group" aria-labelledby="etichettaVelocita"></div>
+        <label class="checkbox"><input id="wait" type="checkbox" checked> Aspetta il mio gesto</label>
+        <label class="checkbox"><input id="repeat" type="checkbox"> Ripeti l’esercizio</label>
+      </div>
+      <div class="ornamento" aria-hidden="true"><span></span><i></i><span></span></div>
+    </section>
+
+    <section id="pianoModeLabel" class="gruppo" aria-label="Modalità di esecuzione">
+      <span class="etichetta" id="etichettaPiano">Modalità di esecuzione</span>
+      <select id="pianoMode" hidden><option value="notes" selected>Note singole</option><option value="chords">Accordi</option><option value="melody">Melodia sola</option></select>
+      <div id="executionChoices" class="segmenti" data-proxy="pianoMode" role="group" aria-labelledby="etichettaPiano"></div>
+      <p id="gestureModeHelp">Ogni mano sceglie una nota con le dita alzate. Chiudi il pugno per fermarla.</p>
+      <div id="melodyControls" hidden>
+        <p id="melodyStatus" class="melody-status" role="status" aria-live="polite">Do4 · maggiore</p>
+        <p id="selectorFeedback" class="selector-feedback" role="status" aria-live="polite">Chiudi il pugno sinistro per preparare un cambio</p>
+        <label class="etichetta" for="tonic">Tonalità della melodia</label>
+        <select id="tonic" class="library-select"><option value="0">Do</option><option value="1">Do♯</option><option value="2">Re</option><option value="3">Re♯</option><option value="4">Mi</option><option value="5">Fa</option><option value="6">Fa♯</option><option value="7">Sol</option><option value="8">Sol♯</option><option value="9">La</option><option value="10">La♯</option><option value="11">Si</option></select>
+        <p class="selector-legend"><b>Sinistra · selettore</b><br>1 dito: ottava su · 2: ottava giù<br>3: tonalità su di un semitono · 4: tonalità giù<br>5: maggiore/minore · pugno: prepara il prossimo cambio</p>
+      </div>
+      <div id="chordQualityLabel">
+        <span id="qualityCaption" class="etichetta">Scala</span>
+        <select id="chordQuality" hidden><option value="major">Maggiore</option><option value="minor">Minore</option></select>
+        <div class="segmenti" data-proxy="chordQuality" role="group" aria-labelledby="qualityCaption"></div>
+      </div>
+    </section>
+
+    <details id="impostazioni" class="impostazioni" open>
+      <summary><span class="etichetta">Strumento e registri</span><span id="riassuntoStrumento" class="riassunto"></span></summary>
+      <fieldset class="gruppo">
+        <legend class="etichetta">Strumento</legend>
+        <select id="instrument" hidden><option value="pianoforte">Pianoforte</option><option value="flauto">Flauto dolce</option><option value="violino">Violino</option><option value="tromba">Tromba</option><option value="batteria">Batteria</option></select>
+        <div class="lista-scelte strumenti" data-proxy="instrument"></div>
+      </fieldset>
+      <div class="ornamento" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="gruppo">
+        <span class="etichetta">Registri</span>
+        <select id="leftOctave" hidden><option value="1">Do1 – Si1</option><option value="2">Do2 – Si2</option><option value="3" selected>Do3 – Si3</option><option value="4">Do4 – Si4</option><option value="5">Do5 – Si5</option><option value="6">Do6 – Si6</option></select>
+        <select id="rightOctave" hidden><option value="0" disabled>La0 – Si0</option><option value="1" disabled>Do1 – Si1</option><option value="2">Do2 – Si2</option><option value="3">Do3 – Si3</option><option value="4" selected>Do4 – Si4</option><option value="5">Do5 – Si5</option><option value="6">Do6 – Si6</option><option value="7">Do7 – Si7</option><option value="8" disabled>Do8</option></select>
+        <div class="registro sinistra" data-proxy="leftOctave" data-mano="Sinistra"></div>
+        <div class="registro destra" data-proxy="rightOctave" data-mano="Destra"></div>
+      </div>
+    </details>
+
+    <div class="ornamento" aria-hidden="true"><span></span><i></i><span></span></div>
+    <div class="gruppo">
+      <label class="etichetta" for="volume">Volume</label>
+      <input id="volume" type="range" min="0" max="100" value="65">
+      <button id="silence" class="secondary">Ferma tutti i suoni</button>
+    </div>
+
+    <details class="help">
+      <summary>Guida e crediti</summary>
+      <p>La fotocamera frontale legge due mani. Se non è disponibile puoi suonare con i tasti sullo schermo. Il video viene elaborato sul dispositivo.</p>
+      <p><b>Note singole:</b> ogni mano suona indipendentemente. 1–5 dita scelgono i gradi I–V; indice e mignolo il VI; aggiungendo il pollice il VII. Il pugno ferma quella mano. Scala maggiore o minore e registri si scelgono dal leggio. La posizione orizzontale non sceglie la nota.</p>
+      <p><b>Accordi (pianoforte):</b> la sinistra sceglie il grado con gli stessi gesti; la destra mostra 1 dito per la posizione base, 2 per il rivolto, 3 per la settima, 4 per la dominante (diminuita in minore). Il pollice destro abbassa un’ottava. Pugno destro o mano mancante fermano l’accordo. La destra non suona note singole in questa modalità.</p>
+      <p><b>Melodia sola:</b> la destra suona con i sette gesti originali; la sinistra cambia ottava (1 su, 2 giù), tonalità di un semitono (3 su, 4 giù) e maggiore/minore (5). Chiudi il pugno sinistro per preparare ogni cambio e tieni il comando per 0,3 secondi. La sinistra non produce suono. Il registro va da La0 a Do8. Nel Training si studia la voce superiore semplificata, senza accompagnamento.</p>
+      <p>Entrando nel Training, per gli strumenti melodici si attiva la melodia guidata: la sinistra suggerisce come spostare la posizione sulla tastiera con tonalità e ottave, la destra mostra la nota e il gesto da suonare. Le mani hanno dita separate e mostrano i nomi delle dita da alzare. La mano successiva scende nel proprio riquadro. Il pugno destro indica silenzio; quello sinistro prepara il selettore. Per studiare le due parti indipendenti puoi scegliere Note singole. Il mantenimento non riceve un punteggio separato.</p>
+      <p>Per ripetere la stessa nota chiudi e riapri il pugno. Le alterazioni esterne alla scala e gli accordi non coperti dai gesti restano disponibili sui tasti touch. Questi comandi non riproducono la diteggiatura di un pianoforte acustico.</p>
+      <p>MusicXML: spartiti non compressi, al massimo due parti o pentagrammi. Ripetizioni e ornamentazioni non ancora supportate vengono segnalate: esporta una versione con le note scritte per esteso.</p>
+      <p>Progetto originale di <a href="https://indecisiveeric.com" target="_blank" rel="noopener noreferrer">Eric Wei</a>. Uso personale, educativo e non commerciale. Campioni: FluidR3 GM, dettagli nel file <a href="./SOUND-LICENSES.txt" target="_blank">licenze dei suoni</a>. Caratteri: Cormorant Garamond, EB Garamond e Cinzel (SIL Open Font License). Riconoscimento mani: MediaPipe.</p>
+    </details>
+  </aside>
+</div>
+</body>
+</html>
+

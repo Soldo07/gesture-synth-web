@@ -1,0 +1,101 @@
+CATALOGO NOTTURNI CHOPIN — FONTI E LICENZE
+
+Composizioni di Frédéric Chopin (1810–1849), pubblico dominio.
+Gli spartiti e i JSON derivati mantengono la licenza della rispettiva edizione.
+Le licenze dei dati non modificano la licenza del codice applicativo.
+
+Modifiche di questa applicazione: conversione MusicXML → eventi JSON, unione legature,
+consolidamento unisoni, dinamiche discrete, acciaccature con tempo sottratto alla nota seguente.
+Durate e altezze scritte conservate; trilli/mordenti/arpeggi non espansi.
+Nessuna esecuzione espressiva o pedale sintetizzati. Le mani seguono staff 1/destra, 2/sinistra,
+inclusi i passaggi tra pentagrammi esplicitamente codificati. Non è una diteggiatura editoriale.
+Nessun ritornello o salto esecutivo nei sette MusicXML originali scaricati.
+Nocturne n. 19 in mi minore = op. 72 n. 1 postumo; op. 19 è invece un Boléro.
+Notturni n. 20 e n. 21 = B. 49 e B. 108: numeri di catalogo, non opus.
+B. 108: autografo privo di tempo/dinamiche; BPM 56 e intensità sono scelte di studio digitali.
+Linee 8va: le pitch MusicXML contengono già le altezze suonate, conservate senza trasporre.
+Riferimento: https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/octave-shift/
+
+Ricostruzione offline: python scripts/build_nocturnes.py
+Aggiornamento fonti: python scripts/build_nocturnes.py --download
+Verifica parser: python -m unittest discover -s scripts -p test_build_nocturnes.py
+Interprete usato: Python runtime Codex, libreria standard; nessuna dipendenza aggiunta.
+SHA256 in catalog.json; controlli per battuta e note originali in validation-report.json.
+Fonti verificate il 19 ottobre 2026.
+
+Chopin · Notturno in fa minore, op. 55 n. 1
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-op55-1/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-op55-1/chopin-nocturne-op55-1.mxl
+Derivato da: https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/055-1-BH-001.krn
+Licenza MusicXML/MXL/JSON: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribuzione: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0. Composition: Frédéric Chopin (1810–1849), public domain. Source: Institut Frédéric Chopin (NIFC), saisie de la première édition (Breitkopf & Härtel, Leipzig) https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/055-1-BH-001.krn. Made into this edition by Noctave (details: https://noctavepiano.com/partitions/chopin-nocturne-op55-1/).
+Public domain composition. Encoded after the first edition (Breitkopf & Härtel, Leipzig) by The Fryderyk Chopin Institute: First Editions of Fryderyk Chopin's Music, Copyright 2017-2021 The Fryderyk Chopin Institute (https://nifc.pl), https://chopinscores.org, https://github.com/pl-wnifc/humdrum-chopin-first-editions, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0). Converted to MusicXML for Noctave (changes: catalog/LICENSES.md of the Noctave project). This file: CC BY 4.0.
+
+Chopin · Notturno in si bemolle minore, op. 9 n. 1
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-op9-1/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-op9-1/chopin-nocturne-op9-1.mxl
+Derivato da: https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/
+Licenza MusicXML/MXL/JSON: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+Attribuzione: Benjamin D. Esham / Mutopia Project, CC BY-SA 2.5; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Attribution: Benjamin D. Esham / Mutopia Project, CC BY-SA 2.5. Composition: Frédéric Chopin (1810–1849), public domain. Source: Mutopia Project (Benjamin D. Esham), d'après G. Schirmer (1915) https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/. Made into this edition by Noctave (details: https://noctavepiano.com/partitions/chopin-nocturne-op9-1/).
+Public domain composition. Encoded for the Noctave project after the Mutopia Project edition by Benjamin D. Esham (CC BY-SA 2.5). This file: CC BY-SA 4.0, attribution: Benjamin D. Esham / Mutopia Project.
+
+Chopin · Notturno in do diesis minore, op. 27 n. 1
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-op27-1/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-op27-1/chopin-nocturne-op27-1.mxl
+Derivato da: https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/027-1-BH-001.krn
+Licenza MusicXML/MXL/JSON: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribuzione: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0. Composition: Frédéric Chopin (1810–1849), public domain. Source: Institut Frédéric Chopin (NIFC), saisie de la première édition (Breitkopf & Härtel, Leipzig) https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/027-1-BH-001.krn. Made into this edition by Noctave (details: https://noctavepiano.com/partitions/chopin-nocturne-op27-1/).
+Public domain composition. Encoded after the first edition (Breitkopf & Härtel, Leipzig) by The Fryderyk Chopin Institute: First Editions of Fryderyk Chopin's Music, Copyright 2017-2021 The Fryderyk Chopin Institute (https://nifc.pl), https://chopinscores.org, https://github.com/pl-wnifc/humdrum-chopin-first-editions, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0). Converted to MusicXML for Noctave (changes: catalog/LICENSES.md of the Noctave project). This file: CC BY 4.0.
+
+Chopin · Notturno in do minore, op. 48 n. 1
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-op48-1/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-op48-1/chopin-nocturne-op48-1.mxl
+Derivato da: https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/048-1-BH-001.krn
+Licenza MusicXML/MXL/JSON: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribuzione: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution: First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0. Composition: Frédéric Chopin (1810–1849), public domain. Source: Institut Frédéric Chopin (NIFC), saisie de la première édition (Breitkopf & Härtel, Leipzig) https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/048-1-BH-001.krn. Made into this edition by Noctave, with some notes adapted (details: https://noctavepiano.com/partitions/chopin-nocturne-op48-1/).
+Public domain composition. Encoded after the first edition (Breitkopf & Härtel, Leipzig) by The Fryderyk Chopin Institute: First Editions of Fryderyk Chopin's Music, Copyright 2017-2021 The Fryderyk Chopin Institute (https://nifc.pl), https://chopinscores.org, https://github.com/pl-wnifc/humdrum-chopin-first-editions, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0). Converted to MusicXML for Noctave (changes: catalog/LICENSES.md of the Noctave project). This file: CC BY 4.0.
+
+Chopin · Notturno in mi minore, op. 72 n. 1 (n. 19, postumo)
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-op72-1/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-op72-1/chopin-nocturne-op72-1.mxl
+Derivato da: https://www.mutopiaproject.org/ftp/ChopinFF/O72/nocturne_in_e_minor/
+Licenza MusicXML/MXL/JSON: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+Attribuzione: Benjamin D. Esham / Mutopia Project, CC BY-SA 4.0; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Attribution: Benjamin D. Esham / Mutopia Project, CC BY-SA 4.0. Composition: Frédéric Chopin (1810–1849), public domain. Source: Mutopia Project (Benjamin D. Esham), d'après G. Schirmer (1915) https://www.mutopiaproject.org/ftp/ChopinFF/O72/nocturne_in_e_minor/. Made into this edition by Noctave (details: https://noctavepiano.com/partitions/chopin-nocturne-op72-1/).
+Public domain composition. Encoded for the Noctave project after the Mutopia Project edition by Benjamin D. Esham (CC BY-SA 4.0). This file: CC BY-SA 4.0, attribution: Benjamin D. Esham / Mutopia Project.
+
+Chopin · Notturno n. 20 in do diesis minore, B. 49 (postumo)
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-b49/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-b49/chopin-nocturne-b49.mxl
+Derivato da: https://musescore.com/score/5615774
+Licenza MusicXML/MXL/JSON: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Attribuzione: Saisie MuseScore n. 5615774, adattata da Noctave; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Composition: Frédéric Chopin (1810–1849), public domain. Source: Saisie MuseScore n° 5615774, comparée à deux autres saisies indépendantes https://musescore.com/score/5615774. Made into this edition by Noctave, with some notes adapted (details: https://noctavepiano.com/partitions/chopin-nocturne-b49/).
+Public domain composition. MuseScore score 5615774 (https://musescore.com/score/5615774), CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Adapted for Noctave (changes: catalog/LICENSES.md of the Noctave project). This file: CC0 1.0.
+
+Chopin · Notturno n. 21 in do minore, B. 108 (postumo)
+Pagina: https://noctavepiano.com/en/sheet-music/chopin-nocturne-b108/
+Download originale: https://noctavepiano.com/partitions/chopin-nocturne-b108/chopin-nocturne-b108.mxl
+Derivato da: https://musescore.com/james_brigham/nocturne-in-c-minor-posth-urtext-edition-b108
+Licenza MusicXML/MXL/JSON: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Attribuzione: James Brigham, edizione urtext dall’autografo; MuseScore; edizione Noctave (noctavepiano.com).
+Le modifiche op. 9 e op. 72 sono condivise con licenza CC BY-SA 4.0.
+Diritti incorporati nella fonte:
+Noctave edition, CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Composition: Frédéric Chopin (1810–1849), public domain. Source: Saisie MuseScore de James Brigham, d'après l'autographe https://musescore.com/james_brigham/nocturne-in-c-minor-posth-urtext-edition-b108. Made into this edition by Noctave (details: https://noctavepiano.com/partitions/chopin-nocturne-b108/).
+Public domain composition. MuseScore score by James Brigham, after the autograph (https://musescore.com/james_brigham/nocturne-in-c-minor-posth-urtext-edition-b108), CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Adapted for Noctave (changes: catalog/LICENSES.md of the Noctave project). This file: CC0 1.0.

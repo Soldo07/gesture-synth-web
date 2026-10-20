@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "pieces": [
+    {
+      "id": "chopin-op55-1",
+      "title": "Chopin · Notturno in fa minore, op. 55 n. 1",
+      "key": "F minor",
+      "opus": 55,
+      "number": 1,
+      "nocturneNumber": null,
+      "jsonPath": "brani/chopin-op55-1.json",
+      "xmlPath": "brani/chopin-op55-1.musicxml",
+      "mxlPath": "brani/chopin-op55-1.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-op55-1/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-op55-1/chopin-nocturne-op55-1.mxl",
+      "derivedFrom": "https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/055-1-BH-001.krn",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).",
+      "notesCount": 1411,
+      "durationBeats": 405.0,
+      "initialBpm": 69.0,
+      "warnings": [
+        "39 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (arpeggiate: 28, trill-mark: 4, wavy-line: 4); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "2 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima."
+      ],
+      "sha256": {
+        "mxl": "49021c376ab9f2ebc325455c3096ff3fb32acbc9ca3b0823238f155b20f5d906",
+        "musicxml": "ba90bc66ab4717e27c12ff784b791613a1f62799030e7e62114ed75c24e0deb2",
+        "json": "1b993fb92c7216ffe91f66c0656a0a614336a6ce13a074f6543b100be585ca75"
+      }
+    },
+    {
+      "id": "chopin-op9-1",
+      "title": "Chopin · Notturno in si bemolle minore, op. 9 n. 1",
+      "key": "B-flat minor",
+      "opus": 9,
+      "number": 1,
+      "nocturneNumber": null,
+      "jsonPath": "brani/chopin-op9-1.json",
+      "xmlPath": "brani/chopin-op9-1.musicxml",
+      "mxlPath": "brani/chopin-op9-1.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-op9-1/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-op9-1/chopin-nocturne-op9-1.mxl",
+      "derivedFrom": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Benjamin D. Esham / Mutopia Project, CC BY-SA 2.5; edizione Noctave (noctavepiano.com).",
+      "notesCount": 1718,
+      "durationBeats": 513.0,
+      "initialBpm": 116.0,
+      "warnings": [
+        "11 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (accidental-mark: 1, arpeggiate: 6, trill-mark: 2); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "12 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima."
+      ],
+      "sha256": {
+        "mxl": "1ea1f5665dfe79aa49479a91344ca2d620589bd3681520ac4925f602fd651b9f",
+        "musicxml": "1132b0a7b90b1768786167ec47d5a106309fb04e77406ce4334a33677113b353",
+        "json": "83256fe2b59de095ff1cabf1ba090e7f5267a1bab54de16f320e90a819e7bce2"
+      }
+    },
+    {
+      "id": "chopin-op27-1",
+      "title": "Chopin · Notturno in do diesis minore, op. 27 n. 1",
+      "key": "C-sharp minor",
+      "opus": 27,
+      "number": 1,
+      "nocturneNumber": null,
+      "jsonPath": "brani/chopin-op27-1.json",
+      "xmlPath": "brani/chopin-op27-1.musicxml",
+      "mxlPath": "brani/chopin-op27-1.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-op27-1/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-op27-1/chopin-nocturne-op27-1.mxl",
+      "derivedFrom": "https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/027-1-BH-001.krn",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).",
+      "notesCount": 1631,
+      "durationBeats": 365.0,
+      "initialBpm": 84.0,
+      "warnings": [
+        "Battuta 83: durata scritta 19.0 quarti, metro 3.0; conservata integralmente.",
+        "1 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (trill-mark: 2); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "10 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima."
+      ],
+      "sha256": {
+        "mxl": "b937c8d4d6ab44bc87a38632c15f6330ce177bea2f1d47e03f56c1ac217dcb82",
+        "musicxml": "8600db46e58b0300108c6492b6677b3b60eb649bb696ebb6c04add8ac8b6099e",
+        "json": "c3398533a23597dddba340e53f9dd6341c0575f0578a93c64d0f246be0b7ae6f"
+      }
+    },
+    {
+      "id": "chopin-op48-1",
+      "title": "Chopin · Notturno in do minore, op. 48 n. 1",
+      "key": "C minor",
+      "opus": 48,
+      "number": 1,
+      "nocturneNumber": null,
+      "jsonPath": "brani/chopin-op48-1.json",
+      "xmlPath": "brani/chopin-op48-1.musicxml",
+      "mxlPath": "brani/chopin-op48-1.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-op48-1/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-op48-1/chopin-nocturne-op48-1.mxl",
+      "derivedFrom": "https://github.com/pl-wnifc/humdrum-chopin-first-editions/blob/95dfb105c1669c72d10b04088566154f12d3dc1c/kern/048-1-BH-001.krn",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "First Editions of Fryderyk Chopin’s Music, © 2017-2021 The Fryderyk Chopin Institute (nifc.pl), chopinscores.org, CC BY 4.0; edizione Noctave (noctavepiano.com).",
+      "notesCount": 3163,
+      "durationBeats": 308.0,
+      "initialBpm": 54.0,
+      "warnings": [
+        "40 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (arpeggiate: 76, trill-mark: 1, wavy-line: 2); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "3 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima.",
+        "Edizione Noctave dalla prima edizione NIFC: alcune note adattate dall’editore; vedere la fonte."
+      ],
+      "sha256": {
+        "mxl": "030654147463b127a899f362a9c6a3d52b0c8ee7d8d1f35b2f759d7000d3ab58",
+        "musicxml": "55c030a5d6d02e4685c4d6dfb169844884480d7c2356c2d30f6108e2cd1e974d",
+        "json": "244fef5337521dbc61d3430015c6d627a56d70c41f32d1db8508ad796d78f9b5"
+      }
+    },
+    {
+      "id": "chopin-op72-1",
+      "title": "Chopin · Notturno in mi minore, op. 72 n. 1 (n. 19, postumo)",
+      "key": "E minor",
+      "opus": 72,
+      "number": 1,
+      "nocturneNumber": 19,
+      "jsonPath": "brani/chopin-op72-1.json",
+      "xmlPath": "brani/chopin-op72-1.musicxml",
+      "mxlPath": "brani/chopin-op72-1.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-op72-1/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-op72-1/chopin-nocturne-op72-1.mxl",
+      "derivedFrom": "https://www.mutopiaproject.org/ftp/ChopinFF/O72/nocturne_in_e_minor/",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Benjamin D. Esham / Mutopia Project, CC BY-SA 4.0; edizione Noctave (noctavepiano.com).",
+      "notesCount": 1100,
+      "durationBeats": 228.0,
+      "initialBpm": 69.0,
+      "warnings": [
+        "20 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (accidental-mark: 1, inverted-mordent: 4, trill-mark: 4); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "9 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima."
+      ],
+      "sha256": {
+        "mxl": "7bd86c806d986a34947b8f25d9529fb130461bb2cb037746b4f6bc8a1a940cd9",
+        "musicxml": "a8bc7e2d3584dc470d3a37807ca9271160818eeeae2b5e8eddeb163bc0bddf07",
+        "json": "141f7f9db930097c290ab2f39ac85d26a2ee862d705406f3f3fe6ae4d7b26453"
+      }
+    },
+    {
+      "id": "chopin-b49",
+      "title": "Chopin · Notturno n. 20 in do diesis minore, B. 49 (postumo)",
+      "key": "C-sharp minor",
+      "opus": null,
+      "number": null,
+      "nocturneNumber": 20,
+      "jsonPath": "brani/chopin-b49.json",
+      "xmlPath": "brani/chopin-b49.musicxml",
+      "mxlPath": "brani/chopin-b49.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-b49/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-b49/chopin-nocturne-b49.mxl",
+      "derivedFrom": "https://musescore.com/score/5615774",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "Saisie MuseScore n. 5615774, adattata da Noctave; edizione Noctave (noctavepiano.com).",
+      "notesCount": 823,
+      "durationBeats": 246.0,
+      "initialBpm": 50.0,
+      "warnings": [
+        "28 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (trill-mark: 8); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "7 unisoni simultanei della stessa mano consolidati in un unico tasto con durata massima.",
+        "Edizione Noctave dalla trascrizione MuseScore n. 5615774: alcune note adattate confrontando due trascrizioni indipendenti; vedere la fonte."
+      ],
+      "sha256": {
+        "mxl": "9fc00b3a461e4794b0fbe1222bec86ede409da7ebc3521cba9cbfb5c22c6e7a5",
+        "musicxml": "3f7cde8dcdaf3b968bf76743fb379edf24b847fadee86d513ceb30836d549113",
+        "json": "bf48af5ee8d27e10f198be4bf047226dad2c228e647aa414bfb4c0fc38891bc8"
+      }
+    },
+    {
+      "id": "chopin-b108",
+      "title": "Chopin · Notturno n. 21 in do minore, B. 108 (postumo)",
+      "key": "C minor",
+      "opus": null,
+      "number": null,
+      "nocturneNumber": 21,
+      "jsonPath": "brani/chopin-b108.json",
+      "xmlPath": "brani/chopin-b108.musicxml",
+      "mxlPath": "brani/chopin-b108.mxl",
+      "sourceUrl": "https://noctavepiano.com/en/sheet-music/chopin-nocturne-b108/",
+      "downloadUrl": "https://noctavepiano.com/partitions/chopin-nocturne-b108/chopin-nocturne-b108.mxl",
+      "derivedFrom": "https://musescore.com/james_brigham/nocturne-in-c-minor-posth-urtext-edition-b108",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "James Brigham, edizione urtext dall’autografo; MuseScore; edizione Noctave (noctavepiano.com).",
+      "notesCount": 828,
+      "durationBeats": 177.0,
+      "initialBpm": 56.0,
+      "warnings": [
+        "20 acciaccature/appoggiature rese con durate positive: ogni gruppo sottrae min(1/8 di quarto, 25% della nota principale) alla nota seguente della stessa voce; ritmo globale conservato.",
+        "Ornamenti scritti non espansi (arpeggiate: 3, inverted-mordent: 1); trilli, mordenti e accordi arpeggiati richiedono interpretazione dell’esecutore.",
+        "Autografo senza indicazione di tempo o dinamiche: 56 BPM è il tempo di studio dell’edizione digitale; le intensità standard delle mani sono una scelta di riproduzione."
+      ],
+      "sha256": {
+        "mxl": "52e42651d57640e8dac10911f71004c34d03a052881df47de2c33a5bc1380140",
+        "musicxml": "45643ede497993a4a0af7b3ecbee4db611a133b0d79a0d9bb460e8be1d6efbbb",
+        "json": "e8bb1d356822b4fc89bf0536ad1b0e0ec4d94df20e3236d18ebaf73cc9087411"
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+CAMPIONI AUDIO LOCALI — Gesture Synth Training
+Importazione verificata: 19 ottobre 2026
+
+Questa applicazione suona registrazioni campionate della libreria FluidR3 GM.
+Non usa un generatore sintetico di riserva. Le note intermedie sono ottenute
+trasponendo i campioni; non sono registrazioni separate di ogni nota/velocità.
+Le librerie vengono caricate dal server locale solo quando si sceglie lo
+strumento, poi restano nella cache audio della sessione.
+
+CONTENUTI E DIMENSIONI DEI FILE MP3 (metadati JSON esclusi)
+
+Pianoforte: 28 campioni, 632062 byte; Do/Mib/Solb/La, ottave 1–7.
+  File preesistenti, conservati senza modifiche.
+  Fonte: Benjamin Gleitzman, MIDI.js Soundfonts, FluidR3_GM,
+  acoustic_grand_piano-mp3.
+  https://github.com/gleitz/midi-js-soundfonts
+  https://github.com/gleitz/midi-js-soundfonts/tree/gh-pages/FluidR3_GM/acoustic_grand_piano-mp3
+  Il README della raccolta dichiara CC BY 3.0 per FluidR3_GM:
+  https://creativecommons.org/licenses/by/3.0/
+  Attribuzione: FluidR3 GM di Frank Wen; rendering MP3 di Benjamin Gleitzman.
+  Modifiche ai campioni piano: nessuna. Il software di conversione della raccolta
+  è MIT, Copyright (C) 2012 Benjamin Gleitzman.
+
+Flauto DOLCE: 8 campioni, 120625 byte; preset General MIDI 74 (Recorder).
+  Non è il flauto traverso GM73.
+Violino: 14 campioni, 343389 byte; preset General MIDI 40 (Violin).
+Tromba: 6 campioni, 52504 byte; preset General MIDI 56 (Trumpet).
+Batteria: 47 campioni, 1043426 byte; kit FluidR3 GM standard 0, note 35–81:
+  grancassa, rullante, hi-hat chiuso/aperto/pedale, tom, crash/ride,
+  e le altre percussioni del kit General MIDI. Ogni nota ha il suo campione.
+
+Fonte di questi quattro strumenti: Sergey Surikov, WebAudioFont Data.
+https://github.com/surikov/webaudiofontdata
+https://github.com/surikov/webaudiofontdata/tree/master/sound
+File sorgente: 0740_FluidR3_GM_sf2_file.js,
+0400_FluidR3_GM_sf2_file.js, 0560_FluidR3_GM_sf2_file.js,
+128{35..81}_0_FluidR3_GM_sf2_file.js.
+
+Conversione: estrazione dei byte MP3 base64 e dei metadati dichiarativi in file
+MP3/JSON locali. Nessun codice JavaScript della fonte viene eseguito. Le copie
+MP3 sono inalterate; durante la decodifica in memoria si applicano normalizzazione
+del volume e un raccordo di massimo 5 ms ai loop dei tre strumenti sostenuti.
+Sono mantenuti punti di loop, intervalli di tastiera e accordatura SF2 originali.
+Manifest per strumento: nome sorgente, byte, SHA-256, pitch e punti di loop.
+Script riproducibile: campioni/import-fluid.py (solo sviluppo, Python standard).
+
+LICENZE
+
+FluidR3 originale: MIT, Copyright (c) 2000-2002, 2008 Frank Wen.
+La fonte WebAudioFont rimanda alla licenza FluidR3 conservata anche qui:
+https://github.com/LibreScore/sf3/blob/master/FluidR3Mono_License.md
+Copia completa locale: campioni/FluidR3-LICENSE.txt.
+Questo progetto usa i campioni FluidR3 GM della raccolta WebAudioFont, non importa
+la versione mono, i suoni aggiuntivi o il motore JavaScript di LibreScore.
+
+WebAudioFont Data: MIT, Copyright (c) 2017 Srgy Surkv.
+https://github.com/surikov/webaudiofontdata/blob/master/LICENSE
+Copia completa locale: campioni/WebAudioFontData-LICENSE.txt.
+Il motore WebAudioFont non viene incorporato: il player Web Audio è implementato
+nel progetto senza nuove dipendenze.
+
+Fluid was constructed in part from samples found in the public domain that
+Frank Wen edited/cleaned/remixed/programmed and largely from recordings of his
+own and in conjunction with the following contributors:
+Suren M. Seron, Scott Hanan, Steve Aupperle, Chris Gillman, Alex Taubr,
+Chris Prola, Andrew Klenk, Winfried Hubbe, Dylan, Tim Gort, Uros Katic,
+Ethan Winer (http://www.ethanwiner.com).
+
+MIT License — FluidR3 original samples / MIDI.js conversion software
+Copyright (c) 2000-2002, 2008 Frank Wen
+Copyright (C) 2012 Benjamin Gleitzman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
