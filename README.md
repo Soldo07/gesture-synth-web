@@ -143,12 +143,15 @@ hanno ruoli precisi in Melodia sola:
 2. Premi **«Apri l'esempio»** per un esercizio breve, oppure scegli un
    Notturno e premi **«Carica il brano»**.
 3. Lascia selezionato **«Aspetta il mio gesto»** e scegli la velocità
-   **50%** per iniziare con calma.
+   **0,5×** per iniziare con calma.
 4. Premi **«Avvia»**. Prepara la posizione con la sinistra e suona la nota
    con la destra; il brano attende l'esecuzione richiesta prima di avanzare.
 
 Puoi mettere in pausa, ricominciare e ripetere l'esercizio. La velocità
-si può portare al **75%** o al **100%** quando conosci meglio i gesti.
+si può impostare a **0,5×, 0,75×, 1×, 1,25×, 1,5× o 2×**.
+**1× è il tempo originale del brano**: musica e discesa dei gesti seguono
+insieme il fattore scelto. Cambiare velocità mette in pausa il brano;
+premi **«Riprendi»** per continuare.
 
 ### Aggiungi l'accompagnamento quando sei pronto
 
